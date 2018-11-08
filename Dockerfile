@@ -1,11 +1,26 @@
 FROM ubuntu:18.10
 
-RUN apt update && apt upgrade -y && apt install -y software-properties-common debconf-utils ubuntu-make
+ENV ANDROID_HOME=/usr/lib/android-sdk
+ENV PATH=$PATH:$ANDROID_HOME/tools
+ENV PATH=$PATH:$ANDROID_HOME/platform-tools
 
-RUN add-apt-repository -y ppa:webupd8team/java && apt update
+RUN apt update \
+	&& apt upgrade -y \
+	&& apt install -y software-properties-common curl unzip
 
-RUN echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | debconf-set-selections
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
+	&& apt install -y nodejs \
+	&& npm i -g react-native-cli yarn
 
-RUN apt install -y oracle-java8-installer
+RUN add-apt-repository -y ppa:openjdk-r/ppa \
+	&& apt update \
+	&& apt install -y openjdk-8-jdk \
+	&& apt install -y gcc-multilib lib32z1 lib32stdc++6
 
-RUN umake android --accept-license
+COPY ./sdk-tools-linux-4333796.zip /tmp
+
+RUN unzip /tmp/sdk-tools-linux-4333796.zip -d usr/lib/android-sdk \
+	&& rm -f /tmp/sdk-tools-linux-4333796.zip \
+	&& yes | $ANDROID_HOME/tools/bin/sdkmanager  "platform-tools" "platforms;android-27" "build-tools;27.0.3"
+
+WORKDIR /usr/src
