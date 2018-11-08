@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  app:
+    image: react-native:latest
+    volumes:
+      - .:/usr/src
+      - /dev:/dev
+    tty: true
+    privileged: true
