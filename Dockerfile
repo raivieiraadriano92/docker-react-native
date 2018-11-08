@@ -17,7 +17,9 @@ RUN add-apt-repository -y ppa:openjdk-r/ppa \
 	&& apt install -y openjdk-8-jdk \
 	&& apt install -y gcc-multilib lib32z1 lib32stdc++6
 
-COPY ./sdk-tools-linux-4333796/* $ANDROID_HOME
+RUN mkdir -p /usr/lib/android-sdk
+
+COPY ./sdk-tools-linux-4333796/ /usr/lib/android-sdk
 
 RUN yes | $ANDROID_HOME/tools/bin/sdkmanager  "platform-tools" "platforms;android-27" "build-tools;27.0.3"
 
