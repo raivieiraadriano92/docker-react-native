@@ -15,6 +15,7 @@ services:
     volumes:
       - .:/usr/src
       - /dev:/dev
+      - "/tmp/.X11-unix:/tmp/.X11-unix"
     tty: true
     privileged: true
 ```
