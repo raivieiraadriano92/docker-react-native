@@ -13,7 +13,7 @@ version: '2'
 
 services:
   app:
-    image: react-native:latest
+    image: raivieiraadriano92/docker-react-native
     volumes:
       - .:/usr/src
       - /dev:/dev
