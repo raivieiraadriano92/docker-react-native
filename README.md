@@ -27,21 +27,22 @@ Abra o terminal na pasta do seu projeto e execute:
 
 ```sh
 docker-compose up -d
-docker-compose exec app bash
-react-native start
+docker-compose exec app react-native start
 ```
 
 Abra uma nova janela no terminal e execute:
 
 ```sh
-docker-compose exec app bash
-react-native run-android
+docker-compose exec app run-android
 ```
 
-## Observações
+## Emulador
 
-1. No momento só possível executar a aplicação em um dispositivo físico via USB, estamos trabalhando para fazer funcionar também no Genymotion.
+Para iniciar o emulador do Android execute:
 
-2. Testamos apenas no Linux, mas achamos que o mapeamento do volume `/dev` no arquivo `docker-compose.yml` funcione também no Mac.
+```sh
+docker-compose exec app bash
+openEmulator
+```
 
 ### Sugestões e melhorias são muito bem vindas :)
