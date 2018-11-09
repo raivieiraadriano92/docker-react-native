@@ -4,7 +4,7 @@ Um facilitador para iniciar o ambiente de desenvolvimento em React Native (Andro
 
 ## Docker Compose
 
-Na pasta do seu projeto, crie o arquivo docker-compose.yml com o conteúdo abaixo:
+Na pasta do seu projeto, crie o arquivo `docker-compose.yml` com o conteúdo abaixo:
 
 ### Linux
 
