@@ -24,6 +24,6 @@ COPY ./sdk-tools-linux-4333796/ /usr/lib/android-sdk
 RUN yes | $ANDROID_HOME/tools/bin/sdkmanager  "platform-tools" "platforms;android-27" "build-tools;27.0.3"
 
 RUN $ANDROID_HOME/tools/bin/sdkmanager "system-images;android-27;google_apis_playstore;x86" \
-	&& echo "no" | $ANDROID_HOME/tools/bin/avdmanager create avd -n emuTest3 -f -k "system-images;android-27;google_apis_playstore;x86"
+	&& echo "no" | $ANDROID_HOME/tools/bin/avdmanager create avd -n emu27 -f -k "system-images;android-27;google_apis_playstore;x86"
 
 WORKDIR /usr/src
