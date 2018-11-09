@@ -21,7 +21,7 @@ services:
     privileged: true
 ```
 
-## Iniciado Serviço
+## Iniciando Serviço
 
 Abra o terminal na pasta do seu projeto e execute:
 
