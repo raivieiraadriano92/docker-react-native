@@ -42,4 +42,4 @@ react-native run-android
 
 1. No momento só possível executar a aplicação em um dispositivo físico via USB, estamos trabalhando para fazer funcionar também no Genymotion.
 
-2. Testamos apenas no Linux, mas achamos que o mapeamento do volume `/dev` no arquivo `docker-compose.yml` funcione também no mac.
+2. Testamos apenas no Linux, mas achamos que o mapeamento do volume `/dev` no arquivo `docker-compose.yml` funcione também no Mac.
