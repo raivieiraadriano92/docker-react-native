@@ -21,6 +21,8 @@ services:
     privileged: true
 ```
 
+OBS: Emuladores instalados diretamente na máquina não funcionam, nesse caso é necessário um dispositivo físico via USB.
+
 ## Iniciando Serviço
 
 Abra o terminal na pasta do seu projeto e execute:
