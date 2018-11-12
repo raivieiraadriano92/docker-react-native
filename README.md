@@ -11,7 +11,8 @@ version: '2'
 
 services:
   app:
-    image: raivieiraadriano92/docker-react-native
+    image: raivieiraadriano92/docker-react-native:with-emulator #imagem COM emulador android
+    #image: raivieiraadriano92/docker-react-native #imagem SEM emulador android
     volumes:
       - .:/usr/src
       - /dev:/dev
@@ -19,6 +20,8 @@ services:
     tty: true
     privileged: true
 ```
+
+OBS: Emuladores instalados diretamente na máquina não funcionam, nesse caso é necessário um dispositivo físico via USB.
 
 ## Iniciando Serviço
 
