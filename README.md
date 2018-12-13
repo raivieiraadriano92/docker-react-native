@@ -15,10 +15,14 @@ services:
     #image: raivieiraadriano92/docker-react-native #imagem SEM emulador android
     volumes:
       - .:/usr/src
+      - ~/.gradle:/root/.gradle
       - /dev:/dev
       - "/tmp/.X11-unix:/tmp/.X11-unix"
     tty: true
     privileged: true
+    environment:
+      NODE_ENV: development
+      DISPLAY: $DISPLAY
 ```
 
 OBS: Emuladores instalados diretamente na máquina não funcionam, nesse caso é necessário um dispositivo físico via USB.
