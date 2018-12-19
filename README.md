@@ -50,7 +50,7 @@ Para iniciar o emulador do Android execute:
 docker-compose exec app bash
 openEmulator
 ```
-Caso ocorra o erro de QXcbConnection no ubuntu basta executar o comando 
+Caso ocorra o erro de QXcbConnection no linux basta executar o comando 
 xhost para dar permissão de acesso ao display.
 
 ```sh
