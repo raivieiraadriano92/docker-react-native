@@ -21,6 +21,6 @@ RUN mkdir -p /usr/lib/android-sdk
 
 COPY ./sdk-tools-linux-4333796/ /usr/lib/android-sdk
 
-RUN yes | $ANDROID_HOME/tools/bin/sdkmanager  "platform-tools" "platforms;android-27" "build-tools;27.0.3"
+RUN yes | $ANDROID_HOME/tools/bin/sdkmanager  "platform-tools" "platforms;android-28" "build-tools;28.0.3"
 
 WORKDIR /usr/src
