@@ -21,10 +21,10 @@ RUN mkdir -p /usr/lib/android-sdk
 
 COPY ./sdk-tools-linux-4333796/ /usr/lib/android-sdk
 
-RUN yes | $ANDROID_HOME/tools/bin/sdkmanager  "platform-tools" "platforms;android-27" "build-tools;27.0.3" "system-images;android-27;default;x86_64" "system-images;android-27;google_apis_playstore;x86"
+RUN yes | $ANDROID_HOME/tools/bin/sdkmanager  "platform-tools" "platforms;android-28" "build-tools;28.0.3" "system-images;android-28;default;x86_64" "system-images;android-28;google_apis_playstore;x86"
 
-RUN echo "no" | $ANDROID_HOME/tools/bin/avdmanager create avd -n emu27 -f -k "system-images;android-27;google_apis_playstore;x86"
+RUN echo "no" | $ANDROID_HOME/tools/bin/avdmanager create avd -n emu28 -f -k "system-images;android-28;google_apis_playstore;x86"
 
-RUN echo "function openEmulator() {\n    $ANDROID_HOME/tools/emulator -avd emu27 -noaudio -no-boot-anim -gpu off\n}" >> ~/.bashrc
+RUN echo "function openEmulator() {\n    $ANDROID_HOME/tools/emulator -avd emu28 -noaudio -no-boot-anim -gpu off\n}" >> ~/.bashrc
 
 WORKDIR /usr/src
