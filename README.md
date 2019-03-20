@@ -39,7 +39,7 @@ docker-compose exec app react-native start
 Abra uma nova janela no terminal e execute:
 
 ```sh
-docker-compose exec app run-android
+docker-compose exec app react-native run-android
 ```
 
 ## Emulador
